@@ -40,11 +40,11 @@ def welcome():
     """List all available api routes."""
     return (
         f"Available Routes:<br/>"
-        f"Precipitation: /api/v1.0/precipitation<br/>"
+        f"Precipitation Data (last 12 months): /api/v1.0/precipitation<br/>"
         f"List of Stations: /api/v1.0/stations<br/>"
-        f"Temperature for one year: /api/v1.0/tobs<br/>"
-        f"Temperature stat from the start date(yyyy-mm-dd): /api/v1.0/yyyy-mm-dd<br/>"
-        f"Temperature stat from start to end dates(yyyy-mm-dd): /api/v1.0/yyyy-mm-dd/yyyy-mm-dd"
+        f"Temperature obervations (last 12 months): /api/v1.0/tobs<br/>"
+        f"Temperature obervation stats from start date (yyyy-mm-dd): /api/v1.0/yyyy-mm-dd<br/>"
+        f"Temperature obervation stats from start date to end dates (yyyy-mm-dd): /api/v1.0/yyyy-mm-dd/yyyy-mm-dd"
     )
     #Convert the query results from the precipitation analysis (one year's worth of data) to a dictionary using date as the key and prcp as the value.
 @app.route("/api/v1.0/precipitation")
